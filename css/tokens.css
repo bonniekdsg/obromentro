@@ -1,0 +1,37 @@
+:root {
+  --mpac-red: #a5122a;
+  --mpac-red-dark: #7e0e20;
+  --mpac-red-soft: #fbeaec;
+  --ink-950: #101114;
+  --ink-900: #1a1a1a;
+  --ink-700: #3d3d3d;
+  --ink-500: #666b73;
+  --ink-300: #c9cdd2;
+  --line: #e3e6ea;
+  --surface: #ffffff;
+  --bg: #f5f6f8;
+  --bg-diagonal: #edeff2;
+  --status-done-bg: #dff5e3;
+  --status-done-fg: #1e7137;
+  --status-running-bg: #fdeccb;
+  --status-running-fg: #865700;
+  --status-planned-bg: #edeff2;
+  --status-planned-fg: #555c64;
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --radius-card: 14px;
+  --radius-pill: 999px;
+  --radius-btn: 8px;
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, .04), 0 6px 18px rgba(16, 24, 40, .055);
+  --shadow-hover: 0 2px 4px rgba(16, 24, 40, .06), 0 12px 28px rgba(16, 24, 40, .1);
+  --container-max: 1440px;
+  --gutter: 32px;
+  --header-height: 76px;
+}

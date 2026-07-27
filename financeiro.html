@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR" data-page="financeiro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Distribuição dos recursos do Auditório Institucional do MPAC por meta e etapa.">
+  <meta name="theme-color" content="#a5122a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Financeiro | Auditório Institucional MPAC</title>
+  <link rel="preload" as="image" type="image/webp" href="assets/renders/render-03-conjunto-entardecer-1280.webp">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/data-loader.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MPAC — página inicial do projeto">
+        <img src="assets/logo_mpac_topo.png" alt="Ministério Público do Estado do Acre" width="1137" height="307">
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a class="nav-link" href="index.html">Visão Geral</a></li>
+          <li><a class="nav-link" href="cronograma.html">Cronograma</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Execução Física</a></li>
+          <li><a class="nav-link" href="financeiro.html" aria-current="page">Financeiro</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Documentos</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="internal-button" type="button" aria-disabled="true" title="Área interna em breve">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#user"></use></svg>
+        Área Interna
+      </button>
+      <button class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg class="icon menu-icon" aria-hidden="true"><use href="assets/icons.svg#menu"></use></svg>
+      </button>
+    </div>
+  </header>
+  <button class="nav-scrim" type="button" aria-label="Fechar menu" tabindex="-1"></button>
+
+  <main id="conteudo-principal">
+    <section class="hero hero--finance" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <span class="hero-badge">Transparência Orçamentária</span>
+        <h1 id="hero-title">Execução Financeira</h1>
+        <p>Distribuição transparente dos recursos previstos para construção, estruturação e equipagem.</p>
+      </div>
+      <span class="illustrative-tag">Perspectiva ilustrativa</span>
+    </section>
+
+    <div class="container main-content">
+      <header class="page-intro">
+        <div>
+          <p class="eyebrow">Investimento público</p>
+          <h2>Composição do orçamento</h2>
+          <p>Conheça o valor global e a participação de cada meta no planejamento financeiro.</p>
+        </div>
+        <button class="export-button" id="export-csv" type="button">
+          <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#download"></use></svg>
+          Exportar CSV
+        </button>
+      </header>
+
+      <section class="finance-kpis" id="finance-kpis" aria-label="Indicadores financeiros"></section>
+
+      <section class="finance-overview content-section">
+        <article class="card donut-card" aria-labelledby="donut-title">
+          <h2 class="section-heading" id="donut-title">Distribuição por Meta</h2>
+          <div class="donut-layout">
+            <div id="donut-chart"></div>
+            <div class="chart-legend" id="donut-legend"></div>
+          </div>
+        </article>
+        <article class="card binding-card" aria-labelledby="binding-title">
+          <span class="icon-bubble" aria-hidden="true"><svg class="icon"><use href="assets/icons.svg#bank"></use></svg></span>
+          <div>
+            <h2 class="section-heading" id="binding-title">Vinculação Orçamentária</h2>
+            <div class="binding-list" id="binding-list"></div>
+          </div>
+        </article>
+      </section>
+
+      <div id="budget-tables"></div>
+
+      <aside class="finance-note" aria-label="Nota sobre os valores">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#info"></use></svg>
+        <p id="finance-note-text"></p>
+      </aside>
+    </div>
+  </main>
+
+  <div class="address-bar" aria-label="Endereço do empreendimento">
+    <div class="address-content"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#pin"></use></svg><span id="project-address"></span></div>
+  </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>Portal de monitoramento do Auditório Institucional do MPAC</p>
+        <div class="footer-meta"><span id="last-updated"></span><span id="data-source"></span></div>
+      </div>
+      <div class="footer-links">
+        <a href="https://transparencia.mpac.mp.br/" rel="noopener">Transparência e LAI</a>
+        <a href="https://www.mpac.mp.br/ouvidoria/" rel="noopener">Ouvidoria MPAC</a>
+      </div>
+    </div>
+  </footer>
+  <noscript><p class="error-message">Consulte os dados financeiros públicos em <a href="data/projeto.json">projeto.json</a>.</p></noscript>
+</body>
+</html>

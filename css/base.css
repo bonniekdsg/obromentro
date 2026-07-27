@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink-700);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.nav-open {
+  overflow: hidden;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+a {
+  color: var(--mpac-red);
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink-900);
+  line-height: 1.18;
+}
+
+.container {
+  width: min(calc(100% - (var(--gutter) * 2)), var(--container-max));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: var(--ink-950);
+  color: white;
+  transform: translateY(-150%);
+  transition: transform .15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 3px solid var(--mpac-red);
+  outline-offset: 3px;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  color: var(--mpac-red);
+  font-size: 15px;
+  font-weight: 760;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.section-heading::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--mpac-red);
+  content: "";
+}
+
+.eyebrow {
+  margin-bottom: 8px;
+  color: var(--mpac-red);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.75;
+}
+
+.icon-bubble {
+  display: grid;
+  flex: 0 0 auto;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--mpac-red-soft);
+  color: var(--mpac-red);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 780;
+  letter-spacing: .04em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.status--concluido {
+  background: var(--status-done-bg);
+  color: var(--status-done-fg);
+}
+
+.status--andamento {
+  background: var(--status-running-bg);
+  color: var(--status-running-fg);
+}
+
+.status--planejado {
+  background: var(--status-planned-bg);
+  color: var(--status-planned-fg);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.content-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 500px;
+}
+
+.loading {
+  min-height: 120px;
+  border-radius: var(--radius-card);
+  background: linear-gradient(90deg, #eef0f2 20%, #f8f9fa 40%, #eef0f2 60%);
+  background-size: 220% 100%;
+  animation: shimmer 1.35s infinite linear;
+}
+
+.error-message {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  border-left: 4px solid var(--mpac-red);
+  background: var(--surface);
+}
+
+@keyframes shimmer {
+  to { background-position: -220% 0; }
+}
+
+@media (max-width: 899px) {
+  :root {
+    --gutter: 20px;
+    --header-height: 68px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

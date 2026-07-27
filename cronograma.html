@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR" data-page="cronograma">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cronograma, marcos e etapas do Auditório Institucional do MPAC.">
+  <meta name="theme-color" content="#a5122a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Cronograma | Auditório Institucional MPAC</title>
+  <link rel="preload" as="image" type="image/webp" href="assets/renders/render-01-praca-civica-1280.webp">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/data-loader.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="MPAC — página inicial do projeto">
+        <img src="assets/logo_mpac_topo.png" alt="Ministério Público do Estado do Acre" width="1137" height="307">
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a class="nav-link" href="index.html">Visão Geral</a></li>
+          <li><a class="nav-link" href="cronograma.html" aria-current="page">Cronograma</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Execução Física</a></li>
+          <li><a class="nav-link" href="financeiro.html">Financeiro</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Documentos</a></li>
+          <li><a class="nav-link" href="#" aria-disabled="true" title="Em breve">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="internal-button" type="button" aria-disabled="true" title="Área interna em breve">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#user"></use></svg>
+        Área Interna
+      </button>
+      <button class="menu-button" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+        <svg class="icon menu-icon" aria-hidden="true"><use href="assets/icons.svg#menu"></use></svg>
+      </button>
+    </div>
+  </header>
+  <button class="nav-scrim" type="button" aria-label="Fechar menu" tabindex="-1"></button>
+
+  <main id="conteudo-principal">
+    <section class="hero hero--timeline" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <span class="hero-badge">Planejamento e Entregas</span>
+        <h1 id="hero-title">Cronograma do Projeto</h1>
+        <p>Acompanhe os marcos, prazos previstos e o andamento de cada etapa do empreendimento.</p>
+      </div>
+      <span class="illustrative-tag">Perspectiva ilustrativa</span>
+    </section>
+
+    <div class="container main-content">
+      <header class="page-intro">
+        <div>
+          <p class="eyebrow">Visão temporal</p>
+          <h2>Marcos e planejamento</h2>
+          <p>O planejamento reúne as entregas estruturantes da obra e da futura equipagem do auditório.</p>
+        </div>
+      </header>
+
+      <section class="timeline-layout content-section">
+        <article class="card expanded-timeline" aria-labelledby="expanded-title">
+          <h2 class="section-heading" id="expanded-title">Linha do Tempo</h2>
+          <ol class="expanded-milestones" id="expanded-milestones"></ol>
+        </article>
+        <article class="card gantt-card" aria-labelledby="gantt-title">
+          <h2 class="section-heading" id="gantt-title">Planejamento Geral</h2>
+          <div class="gantt-scroll">
+            <div class="gantt" id="gantt-chart" role="img" aria-label="Gráfico de Gantt do projeto entre maio de 2024 e dezembro de 2027"></div>
+          </div>
+          <div id="gantt-accessible" class="sr-only"></div>
+        </article>
+      </section>
+
+      <section class="card data-table-card content-section" aria-labelledby="stages-title">
+        <div class="page-intro">
+          <div>
+            <p class="eyebrow">Detalhamento</p>
+            <h2 id="stages-title">Etapas por meta</h2>
+          </div>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Filtrar etapas por status">
+          <button class="filter-button" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter-button" type="button" data-filter="concluido" aria-pressed="false">Concluído</button>
+          <button class="filter-button" type="button" data-filter="andamento" aria-pressed="false">Em andamento</button>
+          <button class="filter-button" type="button" data-filter="planejado" aria-pressed="false">Planejado</button>
+        </div>
+        <div class="table-scroll">
+          <table class="data-table">
+            <caption class="sr-only">Etapas da Meta 1 e da Meta 2, com descrição e status</caption>
+            <thead><tr><th scope="col">Etapa</th><th scope="col">Descrição</th><th scope="col">Meta</th><th scope="col">Status</th></tr></thead>
+            <tbody id="schedule-table-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="address-bar" aria-label="Endereço do empreendimento">
+    <div class="address-content"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#pin"></use></svg><span id="project-address"></span></div>
+  </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p>Portal de monitoramento do Auditório Institucional do MPAC</p>
+        <div class="footer-meta"><span id="last-updated"></span><span id="data-source"></span></div>
+      </div>
+      <div class="footer-links">
+        <a href="https://transparencia.mpac.mp.br/" rel="noopener">Transparência e LAI</a>
+        <a href="https://www.mpac.mp.br/ouvidoria/" rel="noopener">Ouvidoria MPAC</a>
+      </div>
+    </div>
+  </footer>
+  <noscript><p class="error-message">Consulte os dados públicos do cronograma em <a href="data/projeto.json">projeto.json</a>.</p></noscript>
+</body>
+</html>

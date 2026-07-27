@@ -1,0 +1,164 @@
+{
+  "meta": {
+    "atualizadoEm": "2026-07-24",
+    "fonte": "Departamento de Arquitetura e Engenharia — MPAC",
+    "avisoDados": "Percentuais referentes ao acompanhamento conceitual do projeto. Dados ilustrativos.",
+    "avisoFinanceiro": "Os valores poderão ser atualizados após a conclusão dos projetos executivos, orçamentos detalhados e demais estudos técnicos complementares."
+  },
+  "projeto": {
+    "titulo": "Construção e Estruturação do Auditório Institucional do Ministério Público do Estado do Acre",
+    "subtitulo": "Uma infraestrutura pública para cidadania, conhecimento e diálogo com a sociedade",
+    "capacidade": 700,
+    "areaAuditorioM2": 2000,
+    "areaEventosM2": 850,
+    "areaMultiusoM2": 1000,
+    "areaTotalM2": 3850,
+    "valorGlobal": 70000000,
+    "valorGlobalExtenso": "Setenta milhões de reais",
+    "endereco": "Rua Fátima Maia, nº 200, Jardim Europa, CEP 69.915-772, Rio Branco/AC"
+  },
+  "etapas": [
+    { "id": "projetos", "nome": "Projetos Executivos", "percentual": 100, "observacao": "Concluído" },
+    { "id": "licitacao", "nome": "Licitação", "percentual": 78, "observacao": "Em fase final" },
+    { "id": "obra", "nome": "Execução da Obra", "percentual": 42, "observacao": "Em andamento" },
+    { "id": "mobiliario", "nome": "Mobiliário e Equipamentos", "percentual": 18, "observacao": "Em preparação" },
+    { "id": "paisagismo", "nome": "Paisagismo", "percentual": 5, "observacao": "Planejado" }
+  ],
+  "marcos": [
+    {
+      "ordem": 1,
+      "titulo": "Projetos Executivos Concluídos",
+      "status": "concluido",
+      "data": "2024-05",
+      "rotulo": "Concluído em Mai/2024",
+      "descricao": "Conclusão, compatibilização e validação técnica dos projetos necessários à execução do empreendimento.",
+      "inicio": "2024-05",
+      "fim": "2024-12"
+    },
+    {
+      "ordem": 2,
+      "titulo": "Licitação da Obra",
+      "status": "concluido",
+      "data": "2025-03",
+      "rotulo": "Concluído em Mar/2025",
+      "descricao": "Preparação do certame, seleção da empresa responsável e formalização dos instrumentos de contratação.",
+      "inicio": "2025-01",
+      "fim": "2025-05"
+    },
+    {
+      "ordem": 3,
+      "titulo": "Execução da Obra",
+      "status": "andamento",
+      "data": null,
+      "rotulo": "Em andamento",
+      "descricao": "Construção do auditório, instalações prediais, acabamentos e infraestrutura externa sob fiscalização técnica.",
+      "inicio": "2025-06",
+      "fim": "2027-06"
+    },
+    {
+      "ordem": 4,
+      "titulo": "Mobiliário e Equipamentos",
+      "status": "planejado",
+      "data": "2026-08",
+      "rotulo": "Início previsto: Ago/2026",
+      "descricao": "Aquisição, instalação, integração e testes de mobiliário, audiovisual, sonorização e sistemas de automação.",
+      "inicio": "2026-08",
+      "fim": "2027-09"
+    },
+    {
+      "ordem": 5,
+      "titulo": "Paisagismo e Urbanização",
+      "status": "planejado",
+      "data": "2026-12",
+      "rotulo": "Início previsto: Dez/2026",
+      "descricao": "Tratamento dos espaços externos, praça cívica, estacionamento, acessos e integração paisagística.",
+      "inicio": "2026-12",
+      "fim": "2027-12"
+    }
+  ],
+  "conteudo": {
+    "objetivo": "Fortalecer a capacidade institucional do Ministério Público do Estado do Acre na promoção da cidadania, no aprimoramento das políticas públicas, na qualificação de agentes públicos e na ampliação dos espaços de diálogo com a sociedade, por meio da implantação de infraestrutura adequada para realização de eventos, capacitações, audiências públicas e atividades de participação social.",
+    "publico": "Membros, servidores, estagiários e colaboradores do MPAC, gestores públicos, integrantes do Sistema de Justiça, órgãos de controle, instituições de ensino, organizações da sociedade civil, conselhos de direitos, lideranças comunitárias e a população acreana."
+  },
+  "financeiro": {
+    "metas": [
+      {
+        "id": "meta1",
+        "nome": "Construção do Auditório Institucional",
+        "valor": 54000000,
+        "percentualGlobal": 77.14,
+        "etapas": [
+          { "codigo": "1.1", "descricao": "Elaboração, compatibilização e projetos executivos", "valor": 2500000, "status": "concluido" },
+          { "codigo": "1.2", "descricao": "Serviços preliminares", "valor": 1500000, "status": "concluido" },
+          { "codigo": "1.3", "descricao": "Infraestrutura e fundações", "valor": 6500000, "status": "andamento" },
+          { "codigo": "1.4", "descricao": "Superestrutura", "valor": 10500000, "status": "andamento" },
+          { "codigo": "1.5", "descricao": "Cobertura e impermeabilização", "valor": 4000000, "status": "andamento" },
+          { "codigo": "1.6", "descricao": "Alvenarias, fechamentos e esquadrias", "valor": 6000000, "status": "planejado" },
+          { "codigo": "1.7", "descricao": "Instalações prediais (elétrica, hidrossanitária, incêndio, climatização, SPDA, lógica)", "valor": 10000000, "status": "planejado" },
+          { "codigo": "1.8", "descricao": "Revestimentos, forros e pintura", "valor": 6000000, "status": "planejado" },
+          { "codigo": "1.9", "descricao": "Urbanização, estacionamento e paisagismo", "valor": 3000000, "status": "planejado" },
+          { "codigo": "1.10", "descricao": "Acessibilidade, comunicação visual e comissionamento", "valor": 2000000, "status": "planejado" },
+          { "codigo": "1.11", "descricao": "Limpeza final, entrega técnica e recebimento", "valor": 2000000, "status": "planejado" }
+        ]
+      },
+      {
+        "id": "meta2",
+        "nome": "Estruturação e Equipagem do Auditório",
+        "valor": 16000000,
+        "percentualGlobal": 22.86,
+        "etapas": [
+          { "codigo": "2.1", "descricao": "Mobiliário", "valor": 2800000, "status": "planejado" },
+          { "codigo": "2.2", "descricao": "Equipamentos audiovisuais", "valor": 3500000, "status": "planejado" },
+          { "codigo": "2.3", "descricao": "Sistema de sonorização", "valor": 2000000, "status": "planejado" },
+          { "codigo": "2.4", "descricao": "Tratamento acústico", "valor": 2300000, "status": "planejado" },
+          { "codigo": "2.5", "descricao": "Iluminação cênica", "valor": 1200000, "status": "planejado" },
+          { "codigo": "2.6", "descricao": "Tecnologia da informação e automação", "valor": 1300000, "status": "planejado" },
+          { "codigo": "2.7", "descricao": "Equipamentos complementares de climatização e automação", "valor": 900000, "status": "planejado" },
+          { "codigo": "2.8", "descricao": "Segurança, CFTV e controle de acesso", "valor": 700000, "status": "planejado" },
+          { "codigo": "2.9", "descricao": "Equipagem do palco, camarins e salas de apoio", "valor": 700000, "status": "planejado" },
+          { "codigo": "2.10", "descricao": "Integração, programação e testes", "valor": 400000, "status": "planejado" },
+          { "codigo": "2.11", "descricao": "Treinamento e operação assistida", "valor": 200000, "status": "planejado" }
+        ]
+      }
+    ]
+  },
+  "vinculacao": {
+    "ppa": {
+      "periodo": "2024–2027",
+      "eixo": "Desenvolvimento Social e Segurança Pública",
+      "programa": "Defesa da Cidadania e Direitos Humanos"
+    },
+    "loa": {
+      "ano": 2026,
+      "orgao": "304",
+      "programaTrabalho": "304.001.03.541.1474.12740000",
+      "especificacao": "Defesa da Cidadania e Direitos Humanos"
+    }
+  },
+  "renders": [
+    {
+      "id": "fachada",
+      "arquivo": "render-02-fachada-principal",
+      "alt": "Perspectiva ilustrativa da fachada principal do Auditório Institucional do MPAC",
+      "legenda": "Perspectiva ilustrativa — imagem de projeto, sujeita a alterações."
+    },
+    {
+      "id": "praca",
+      "arquivo": "render-01-praca-civica",
+      "alt": "Perspectiva ilustrativa da praça cívica de acesso ao auditório",
+      "legenda": "Perspectiva ilustrativa — imagem de projeto, sujeita a alterações."
+    },
+    {
+      "id": "aerea",
+      "arquivo": "render-04-praca-aerea",
+      "alt": "Vista aérea da praça cívica com piso representando o mapa do Estado do Acre",
+      "legenda": "Perspectiva ilustrativa — imagem de projeto, sujeita a alterações."
+    },
+    {
+      "id": "conjunto",
+      "arquivo": "render-03-conjunto-entardecer",
+      "alt": "Perspectiva ilustrativa do conjunto institucional integrado à nova sede do MPAC",
+      "legenda": "Perspectiva ilustrativa — imagem de projeto, sujeita a alterações."
+    }
+  ]
+}
