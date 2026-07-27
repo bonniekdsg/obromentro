@@ -1,6 +1,7 @@
 import { initNavigation, initStatusFilters } from './nav.js';
 import { createProgressRing, initProgressRings } from './progress-ring.js';
 import { renderDonut, renderGantt } from './charts.js';
+import { initCarousel } from './carousel.js';
 
 const ICONS = {
   capacidade: 'users',
@@ -90,6 +91,7 @@ function renderOverview(data) {
 
   document.querySelector('#objective-text').textContent = data.conteudo.objetivo;
   document.querySelector('#audience-text').textContent = data.conteudo.publico;
+  initCarousel(data.renders);
 }
 
 function renderSchedule(data) {

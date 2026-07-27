@@ -48,6 +48,8 @@ async function inspect(path, width, expected) {
     ganttBars: document.querySelectorAll('.gantt-bar').length,
     financeKpis: document.querySelectorAll('.finance-kpi').length,
     budgetTables: document.querySelectorAll('.budget-card').length,
+    carouselSlides: document.querySelectorAll('.carousel-slide').length,
+    carouselDots: document.querySelectorAll('.carousel-dot').length,
     mobileMenuVisible: getComputedStyle(document.querySelector('.menu-button')).display !== 'none'
   }))()`);
 
@@ -60,10 +62,16 @@ async function inspect(path, width, expected) {
 await call('Page.enable');
 await call('Runtime.enable');
 
-console.log(await inspect('index.html', 1440, { kpis: 3, rings: 5, mobileMenuVisible: false }));
+console.log(await inspect('index.html', 1440, { kpis: 3, rings: 5, carouselSlides: 6, carouselDots: 4, mobileMenuVisible: false }));
 console.log(await inspect('cronograma.html', 1440, { scheduleRows: 22, ganttBars: 5, mobileMenuVisible: false }));
 console.log(await inspect('financeiro.html', 1440, { financeKpis: 3, budgetTables: 2, mobileMenuVisible: false }));
-console.log(await inspect('index.html', 390, { kpis: 3, rings: 5, mobileMenuVisible: true }));
+console.log(await inspect('index.html', 390, { kpis: 3, rings: 5, carouselSlides: 6, carouselDots: 4, mobileMenuVisible: true }));
+
+await evaluate("document.querySelectorAll('.carousel-dot')[3].click(); true");
+await new Promise((resolve) => setTimeout(resolve, 750));
+await evaluate("document.querySelector('.carousel-arrow--next').click(); true");
+await new Promise((resolve) => setTimeout(resolve, 750));
+assert.equal(await evaluate("document.querySelector('#carousel-counter').textContent"), '1 / 4', 'o carrossel deve retornar à primeira imagem após a última');
 
 assert.deepEqual(runtimeErrors, [], `erros de JavaScript encontrados: ${runtimeErrors.join(', ')}`);
 socket.close();
